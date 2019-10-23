@@ -1,0 +1,157 @@
+
+
+<div class="container">
+    <h2>User Profile</h2>
+    <form class="well form-horizontal" #profileForm="ngForm">
+       <table class="table table-striped">
+          <tbody>
+              
+             <tr>
+                           
+                <td colspan="1" >
+                   
+                      <fieldset>
+                            <label class="col-md-8 control-label"><h6>Personal Details</h6></label>
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">First Name</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><input id="firstname" name="firstname" [(ngModel)]="user.firstname" placeholder="First Name" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                         <div class="form-group">
+                                <label class="col-md-4 control-label">Last Name</label>
+                                <div class="col-md-8 inputGroupContainer">
+                                   <div class="input-group"><input id="lastname" name="lastname" [(ngModel)]="user.lastname" placeholder="last Name" class="form-control" required="true" value="" type="text"></div>
+                                </div>
+                             </div>
+                        <div class="radio-inline">
+                                <label class="col-md-2 control-label">Gender</label>
+                                </div>
+                                
+                                <label class="col-md-3 control-label"><input type="radio" name="gender" value="male" [(ngModel)]="user.gender">Male</label>
+                                      
+                                    
+                                <label class="col-md-4 control-label"><input type="radio" name="gender" value="female" [(ngModel)]="user.gender">Female</label>
+                                    
+                             
+                         <div class="form-group">
+                                <label class="col-md-6 control-label">Date Of Birth</label>
+                                <div class="col-md-4 inputGroupContainer">
+                                <label class="col-md-1.5 control-label"><input type="date" name="date" [(ngModel)]="user.dob"></label>
+                         </div>
+                        </div>
+                         
+                         
+                         
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">Email</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><input id="email" name="email" [(ngModel)]="user.email" placeholder="Email" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                         <div class="form-group">
+                            <label class="col-md-6 control-label">Phone Number</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><input id="phoneNumber" name="phoneNumber" [(ngModel)]="user.mobile" placeholder="Phone Number" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                      </fieldset>
+                  
+                </td>
+                <td colspan="1">
+                  
+                      <fieldset>
+                            <label class="col-md-8 control-label"><h6>Address</h6></label>
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">Address</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><input id="addressLine1" name="addressLine1" [(ngModel)]="user.address" placeholder="Address Line 1" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">City</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><input id="city" name="city" [(ngModel)]="user.city" placeholder="City" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">State</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><input id="state" name="state" [(ngModel)]="user.state" placeholder="State/Province/Region" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                         <div class="form-group">
+                            <label class="col-md-6 control-label">Postal Code/ZIP</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><input id="postcode" name="postcode" [(ngModel)]="user.zipcode" placeholder="Postal Code/ZIP" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">Country</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group">
+                                 
+                                  <select class="selectpicker form-control" [(ngModel)]="user.country" name="country">
+                                     <option value="INDIA" >India</option >
+                                  </select>
+                               </div>
+                            </div>
+                         </div>
+                         
+                      </fieldset>
+               
+                </td>
+
+                <td colspan="1">
+                  
+                        <fieldset>
+                                <label class="col-md-8 control-label"><h6>Professional Details</h6></label>
+                            
+                                <div class="form-group">
+                                        <label class="col-md-4 control-label">Quilification</label>
+                                        <div class="col-md-8 inputGroupContainer">
+                                           <div class="input-group">
+                                             
+                                              <select class="selectpicker form-control" [(ngModel)]="user.quilification" name="quilification">
+                                                    <option>-------Select------</option>
+                                                 <option value="SSC">SSC</option>
+                                                 <option value="HSC">HSC</option>
+                                                 <option value="BE">BE</option>
+                                                 <option value="ME">ME</option>
+                                                 <option value="BSc">BSc</option>
+                                                 <option value="MCA">MCA</option>
+                                                 <option value="MBA">MBA</option>
+                                              </select>
+                                           </div>
+                                        </div>
+                                     </div>
+                           <div class="form-group">
+                              <label class="col-md-4 control-label">Company</label>
+                              <div class="col-md-8 inputGroupContainer">
+                                 <div class="input-group"><input id="company" name="compay" [(ngModel)]="user.company" placeholder="Company" class="form-control" required="true" value="" type="text"></div>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-md-8 control-label">Company Address</label>
+                              <div class="col-md-8 inputGroupContainer">
+                                 <div class="input-group"><input id="caddress" name="caddress" [(ngModel)]="user.companyAddr" placeholder="Company Address" class="form-control" required="true" value="" type="text"></div>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                                
+                                <div class="col-md-8 inputGroupContainer">
+                                        <button class="col-md-4 control-label" type="button" class="btn btn-primary" (click)="save(user)">Save</button> 
+                                       &nbsp; <button class="col-md-4 control-label" type="button" (click)="back()" class="btn btn-primary">Cancle</button>                
+                                </div>
+                             </div>
+                           
+                        </fieldset>
+                     
+                  </td>
+             </tr>
+   
+          </tbody>
+       </table>
+   
+    </form>
+    </div>

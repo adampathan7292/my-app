@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>Login Form</h2>
+  <form #loginForm="ngForm">
+    <div class="form-group">
+      <label for="username">UserName:</label>
+      <input type="text" class="form-control" id="username" placeholder="Enter UserName"  [(ngModel)]="user.username" name="username">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" [(ngModel)]="user.password" name="pwd">
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary" (click)="loginUser(user,loginForm)">Login</button>
+    <label><a [routerLink]="['/signup']">Sign Up</a></label>
+    </div>
+    
+     
+    
+  </form>
+</div>

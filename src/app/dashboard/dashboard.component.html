@@ -1,0 +1,43 @@
+
+<div class="container">
+  <h2>All Profiles</h2>
+    
+  <table class="table table-striped" >
+    <thead>
+      <tr >
+        <th>Id</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Mobile</th>
+        <th>Address</th>
+        <th>Gender</th>
+        <th>DOB</th>
+        <th>Company</th>
+        <th>Comp Address</th>
+        <th>city</th>
+        
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor="let user of user">
+        <td>{{user.profile?.id}}</td>
+        <td>{{user.profile.firstname}}</td>
+        <td>{{user.profile.lastname}}</td>
+        
+        <td>{{user.profile.email}}</td>
+        <td>{{user.role[0].role}}</td>
+        <td>{{user.profile.mobile}}</td>
+        <td>{{user.profile.address}}</td>
+        <td>{{user.profile.gender}}</td>
+        <td>{{user.profile.dob}}</td>
+        <td>{{user.profile.company}}</td>
+        <td>{{user.profile.companyAddr}}</td>
+        <td>{{user.profile.city}}</td>
+        
+      </tr>
+    </tbody>
+  </table>
+</div>
+
